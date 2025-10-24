@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Vineet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .profile-pic.side {
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 0 20px 5px gold;
+        animation: pulseGlow 2s infinite;
+        }
+
+        @keyframes pulseGlow {
+        0% {
+            box-shadow: 0 0 10px 3px gold;
+        }
+        50% {
+            box-shadow: 0 0 25px 8px gold;
+        }
+        100% {
+            box-shadow: 0 0 10px 3px gold;
+        }
+        }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="topbar">
+    <div class="brand">Vineet</div>
+    <nav class="nav">
+      <a href="home.html" class="nav-link active">Home</a>
+      <a href="education.html" class="nav-link">Education</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="achievements.html" class="nav-link">Achievements</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <main>
+    <section class="section-pad about-grid">
+      <div class="about-text">
+        <h2>Welcome to My Portfolio</h2>
+        <p class="about-tagline">Driven by faith, powered by curiosity — building software to make an impact.</p>
+        <p class="about-para">I am passionate about AI, full-stack development, and problem-solving. I love turning ideas into projects that help people and glorify God. Scroll down to see my skills and achievements.</p>
+      </div>
+      <div class="about-pic">
+        <img src="profile.jpg" alt="Vineet — profile picture" class="profile-pic side">
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section-pad skills">
+      <h2>Skills</h2>
+      <p class="muted">Tools & technologies I work with</p>
+      <div class="skills-grid">
+        <div class="skill"><img src="python logo.png" alt="Python logo"></div>
+        <div class="skill"><img src="javascript logo.png" alt="JavaScript logo"></div>
+        <div class="skill"><img src="logos/html-logo.png" alt="HTML logo"></div>
+        <div class="skill"><img src="logos/css-logo.png" alt="CSS logo"></div>
+        <div class="skill"><img src="logos/fastapi-logo.png" alt="FastAPI logo"></div>
+        <div class="skill"><img src="logos/git-logo.png" alt="Git logo"></div>
+        <div class="skill"><img src="logos/docker-logo.png" alt="Docker logo"></div>
+        <div class="skill"><img src="logos/kivy-logo.png" alt="Kivy logo"></div>
+        <div class="skill"><img src="logos/ml-logo.png" alt="ML logo"></div>
+        <div class="skill"><img src="logos/placeholder.svg" alt="Placeholder logo"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:vineet.official33@gmail.com">vineet.official33@gmail.com</a></p>
+        <p>Phone: +91 99627 19350</p>
+      </div>
+      <div class="footer-right">
+        <h3>Follow</h3>
+        <ul class="social">
+          <li><a href="https://github.com/zephyric" target="_blank">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://youtube.com/@zephyric.official" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Vineet | All for the glory of Jesus Christ ✝️</p>
+    </div>
+  </footer>
+
+</body>
+</html>

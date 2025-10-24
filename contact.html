@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Vineet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="topbar">
+    <div class="brand">Vineet</div>
+    <nav class="nav">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="education.html" class="nav-link">Education</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="achievements.html" class="nav-link">Achievements</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-pad">
+      <h1>Contact Me</h1>
+      <p class="muted">Feel free to reach out using the form below:</p>
+      <form action="https://formspree.io/f/mldpqzdv" method="POST" style="max-width:600px;margin:20px auto;text-align:left;">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" placeholder="Your name" style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #555;"><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Your email" style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #555;"><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" placeholder="Your message" rows="5" style="width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #555;"></textarea><br>
+        <button type="submit" style="padding:10px 20px;border:none;border-radius:6px;background:gold;color:#111;font-weight:600;cursor:pointer;">Send</button>
+      </form>
+      <p id="thankyou" style="color:gold;display:none;">Thank you! I’ll get back to you soon ✝️</p>
+    </section>
+  </main>
+
+  <script>
+  const form = document.querySelector("form");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    const action = form.action;
+    fetch(action, { method: "POST", body: new FormData(form), headers: { 'Accept': 'application/json' }})
+      .then(() => { document.getElementById("thankyou").style.display = "block"; form.reset(); })
+      .catch(err => { console.error(err); alert("Oops! There was a problem."); });
+  });
+  </script>
+
+      
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:vineet.official33@gmail.com">vineet.official33@gmail.com</a></p>
+        <p>Phone: +91 99627 19350</p>
+      </div>
+      <div class="footer-right">
+        <h3>Follow</h3>
+        <ul class="social">
+          <li><a href="https://github.com/zephyric" target="_blank">GitHub</a></li>
+          <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://youtube.com/@zephyric.official" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Vineet | All for the glory of Jesus Christ ✝️</p>
+    </div>
+  </footer>
+
+</body>
+</html>
